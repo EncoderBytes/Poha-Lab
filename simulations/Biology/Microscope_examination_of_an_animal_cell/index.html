@@ -52,7 +52,10 @@
         </button>
       </div>
       <div id="unity-fullscreen-button"></div>
-      <div id="unity-build-title">SimplePendulum</div>
+      <div id="unity-build-title">examination of cell</div>
+    </div>
+    <div id="loader">
+      <div class="loader-bar"></div>
     </div>
   </div>
   <script>
@@ -147,6 +150,20 @@
       });
     };
     document.body.appendChild(script);
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+    crossorigin="anonymous"></script>
+  <script>
+    var loaderDuration = 10000;
+
+    // Show the pre-loader
+    $('#loader').show();
+
+    // Animate the progress bar of the pre-loader
+    $('.loader-bar').animate({ width: "100%" }, loaderDuration, function () {
+      // Hide the pre-loader when animation is complete
+      $('#loader').hide();
+    });
   </script>
 </body>
 
